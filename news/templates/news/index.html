@@ -8,17 +8,22 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="normalize.css">
     <title>Hello, world!</title>
     <style>
         body {
-            background: url(day.jpg) center no-repeat;
+            background: url(day.jpg) no-repeat;
             background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .news {
+            background-color: rgba(255, 255, 255, 0.5);
         }
     </style>
 </head>
 
-<body class="vw-100 vh-100">
+<body class="">
     <div class="container vw-50 align-middle">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container d-flex justify-content-between">
@@ -34,13 +39,40 @@
                 </ul>
             </div>
         </nav>
-    </div>
+        <div class="container">
+            <div class="row align-self-start">
+                <div class="col-7 mr-4 ml-4">
+                    <div class="container d-flex justify-content-center flex-column mt-5">
+                        <div class="container p-4 news mw-100 mh-100">
+                            <div class="pb-3 pl-3 pr-3">
+                                Название
+                            </div>
+                            <div class="p-4">
+                                <img src="dron.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="pt-3 pl-3 pr-3">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima tenetur provident quas voluptatum blanditiis sequi, voluptate fugiat qui beatae consequuntur pariatur placeat architecto illo ipsam eum quisquam sapiente, ipsum aut.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mr-4 ml-4 mt-5">
+                    <div class="container d-flex justify-content-center bg-dark">
+                        <div class="container bg-light">
+                            fdsfsdl
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>
