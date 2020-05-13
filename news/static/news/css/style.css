@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,700&display=swap');
 body {
+    font-family: 'Josefin Sans', sans-serif;
     background: url(../img/day.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -6,4 +8,16 @@ body {
 
 .news {
     background-color: rgba(255, 255, 255, 0.8);
+}
+
+.main-text {
+    font-size: 1.1rem;
+}
+
+.date-author {
+    color: rgb(170, 162, 162);
+}
+
+.title {
+    font-size: 1.4rem;
 }
