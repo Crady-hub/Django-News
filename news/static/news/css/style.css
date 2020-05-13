@@ -1,0 +1,9 @@
+body {
+    background: url(../img/day.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.news {
+    background-color: rgba(255, 255, 255, 0.8);
+}

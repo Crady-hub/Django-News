@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -8,26 +9,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="normalize.css">
-    <title>Hello, world!</title>
-    <style>
-        body {
-            background: url(day.jpg) no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-        
-        .news {
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-    </style>
+    <link rel="stylesheet" href="{% static "news/css/normalize.css" %}">
+    <link rel="stylesheet" href="{% static "news/css/style.css" %}">
+    <title>News</title>
 </head>
 
-<body class="">
+<body>
     <div class="container vw-50 align-middle">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container d-flex justify-content-between">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">NEWS</a>
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -59,7 +50,7 @@
                 <div class="col mr-4 ml-4 mt-5">
                     <div class="container d-flex justify-content-center bg-dark">
                         <div class="container bg-light">
-                            fdsfsdl
+                            По идее фильтрация
                         </div>
                     </div>
                 </div>
