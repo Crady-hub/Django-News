@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,700&display=swap');
 body {
-    font-family: 'Josefin Sans', sans-serif;
     background: url(../img/day.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -19,5 +17,5 @@ body {
 }
 
 .title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
