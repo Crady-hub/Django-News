@@ -5,9 +5,9 @@ from django.utils import timezone
 class Article(models.Model):
     title = models.CharField(max_length=100)
     text = models.TextField()
-    author = models.CharField(max_length=50)
+    author = models.CharField(max_length=50, null=True, default='Анонимус')
     pub_date = models.DateField(default=timezone.now)
-    img = models.ImageField(upload_to='news', default='default/news-no-img.jpg')
+    img = models.ImageField(upload_to='news', default='default/news-no-img.jpg', null=True)
 
     def __str__(self):
         return self.title

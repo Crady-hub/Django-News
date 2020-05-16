@@ -1,7 +1,7 @@
 {% extends 'news/index.html' %}
 {% block content %}
     {% for post in articles %}
-    <div class="container p-4 news mw-100 mh-100 mb-5">
+    <div class="container p-4 news mw-100 mh-100 mb-5" id="{{ post.id }}">
         <div class="pb-3 pl-3 pr-3 font-weight-bold title text-justify">
             <p class=>{{ post.title }}</p>
         </div>

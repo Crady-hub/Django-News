@@ -5,7 +5,12 @@
 
 function scroll(event) {
     selector = this.querySelector('.bg-image')
-    selector.style.transform = `translateY(-${window.pageYOffset/50}px) `
+    if (window.pageYOffset / 40 > 196) {
+        return
+    } else {
+        selector.style.transform = `translateY(-${window.pageYOffset/40}px)`
+    }
 }
+
 // document.addEventListener('mousemove', parallax)
 document.addEventListener('scroll', scroll)
