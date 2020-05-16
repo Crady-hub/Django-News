@@ -35,22 +35,8 @@
             <div class="row align-self-start">
                 <div class="col-7 mr-4 ml-4">
                     <div class="container d-flex justify-content-center flex-column mt-5">
-                        <div class="container p-4 news mw-100 mh-100">
-                            <div class="pb-3 pl-3 pr-3 font-weight-bold title text-justify">
-                                <p class=>Дроны-убийцы. Беспилотники готовы начать третью мировую войну</p>
-                            </div>
-                            <div class="pr-4 pl-4">
-                                <img src="{% static 'news/img/news-no-img.jpg'%}" class="img-fluid">
-                            </div>
-                            <div class="pt-4 pl-3 pr-3 main-text text-justify">
-                                <p>На днях в Саудовской Аравии беспилотными летательными аппаратами (БПЛА) были атакованы два нефтеперерабатывающих завода. На предприятиях начались пожары. Ответственность за атаку взяли на себя йеменские повстанцы-хуситы,
-                                    хотя пострадавшая сторона обвиняет в нападении Иран.</p>
-                            </div>
-                            <div class="pt-2 pl-3 pr-3 d-flex justify-content-between date-author">
-                                <div>Author</div>
-                                <div>31.09.2019</div>
-                            </div>
-                        </div>
+                        {% block content %}
+                        {% endblock content %}
                     </div>
                 </div>
                 <div class="col mr-4 ml-4 mt-5">

@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http import StreamingHttpResponse
-import datetime
+from .models import Article
 
 # Create your views here.
 def main(request):
-    return render(request, 'news/index.html')
+    context = {'articles': Article.objects.all()}
+    return render(request, 'news/news-block.html', context)

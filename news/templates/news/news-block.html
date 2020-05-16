@@ -1,0 +1,20 @@
+{% extends 'news/index.html' %}
+{% block content %}
+    {% for post in articles %}
+    <div class="container p-4 news mw-100 mh-100 mb-5">
+        <div class="pb-3 pl-3 pr-3 font-weight-bold title text-justify">
+            <p class=>{{ post.title }}</p>
+        </div>
+        <div class="pr-4 pl-4">
+            <img src="{{ post.img.url }}" class="img-fluid">
+        </div>
+        <div class="pt-4 pl-3 pr-3 main-text text-justify">
+            <p>{{ post.text|truncatewords:25 }}</p>
+        </div>
+        <div class="pt-2 pl-3 pr-3 d-flex justify-content-between date-author">
+            <div>{{ post.author }}</div>
+            <div>{{ post.pub_date }}</div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock content %}
