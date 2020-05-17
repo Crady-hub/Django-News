@@ -31,7 +31,7 @@ bright.onclick = function() {
     if (document.querySelector('.navbar-dark')) {
         document.querySelector('.navbar-dark').className = 'navbar navbar-expand-lg navbar-light bg-light'
         document.querySelectorAll('.news').forEach(block => {
-            block.style.backgroundColor = `rgba(255, 255, 255, 0.8)`
+            block.style.backgroundColor = `rgba(255, 255, 255, 0.9)`
             block.style.color = `black`
         });
         document.querySelector('.bg-image').removeAttribute('style')
