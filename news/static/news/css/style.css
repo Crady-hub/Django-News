@@ -35,5 +35,15 @@
 }
 
 .title {
+    cursor: pointer;
     font-size: 1.2rem;
+}
+
+
+/* .title-text:hover {
+    color: #405397;
+} */
+
+.img {
+    cursor: pointer;
 }

@@ -5,3 +5,7 @@ from .models import Article
 def main(request):
     context = {'articles': Article.objects.all()}
     return render(request, 'news/news-block.html', context)
+
+def article(request, article_id):
+    context = {'article': Article.objects.get(id=article_id)}
+    return render (request, 'news/template_article.html', context)

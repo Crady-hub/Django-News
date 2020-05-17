@@ -1,20 +1,27 @@
 {% extends 'news/index.html' %}
 {% block content %}
     {% for post in articles %}
-    <div class="container p-4 news mw-100 mh-100 mb-5" id="{{ post.id }}">
-        <div class="pb-3 pl-3 pr-3 font-weight-bold title text-justify">
-            <p class=>{{ post.title }}</p>
+    <div class="container p-4 news mw-100 mh-100 mb-5" id="{{ post.id }}" onclick="goto(this)">
+        <div class="mb-4 ml-3 mr-3 font-weight-bold title text-justify">
+            <p class="title-text">{{ post.title }}</p>
         </div>
-        <div class="pr-4 pl-4">
+        <div class="mr-4 ml-4 img">
             <img src="{{ post.img.url }}" class="img-fluid">
         </div>
-        <div class="pt-4 pl-3 pr-3 main-text text-justify">
+        <div class="mt-4 ml-3 mr-3 main-text text-justify">
             <p>{{ post.text|truncatewords:25 }}</p>
         </div>
-        <div class="pt-2 pl-3 pr-3 d-flex justify-content-between date-author">
+        <div class="mt-2 ml-3 mr-3 d-flex justify-content-between date-author">
             <div>{{ post.author }}</div>
             <div>{{ post.pub_date }}</div>
         </div>
     </div>
     {% endfor %}
 {% endblock content %}
+{% block sidebar %}
+    <div class="container d-flex justify-content-center">
+        <div class="container bg-light">
+            По идее фильтрация
+        </div>
+    </div>
+{% endblock sidebar %}
