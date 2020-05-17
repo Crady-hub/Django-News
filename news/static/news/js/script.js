@@ -2,8 +2,10 @@
 //     selector = this.querySelector('.bg-image')
 //     selector.style.transform = `translate(${event.clientX/50}px, ${event.clientY/50}px) `
 // }
+// document.addEventListener('mousemove', parallax)
 
-function scroll(event) {
+
+function parallax(event) {
     selector = this.querySelector('.bg-image')
     if (window.pageYOffset / 40 > 196) {
         return
@@ -12,5 +14,26 @@ function scroll(event) {
     }
 }
 
-// document.addEventListener('mousemove', parallax)
-document.addEventListener('scroll', scroll)
+document.addEventListener('scroll', parallax)
+
+dark.onclick = function(event) {
+    if (document.querySelector('.navbar-light')) {
+        document.querySelector('.navbar-light').className = 'navbar navbar-expand-lg navbar-dark bg-dark'
+        document.querySelectorAll('.news').forEach(block => {
+            block.style.backgroundColor = `rgba(52, 58, 64, 0.8)`
+            block.style.color = `white`
+        });
+        document.querySelector('.bg-image').style.backgroundImage = 'url(/static/news/img/night.jpg)'
+    }
+}
+
+bright.onclick = function(event) {
+    if (document.querySelector('.navbar-dark')) {
+        document.querySelector('.navbar-dark').className = 'navbar navbar-expand-lg navbar-light bg-light'
+        document.querySelectorAll('.news').forEach(block => {
+            block.style.backgroundColor = `rgba(255, 255, 255, 0.8)`
+            block.style.color = `black`
+        });
+        document.querySelector('.bg-image').style.backgroundImage = ''
+    }
+}
