@@ -23,8 +23,13 @@
 {% block sidebar %}
     <div class="col mr-3 ml-3 mt-5">
         <div class="container d-flex justify-content-center sidebar">
-            <div class="container bg-light">
-                Подборка новостей, должна быть когда-то
+            <div class="container">
+                {% for article in sidebar_article %}
+                    <div class="text-justify m-3 font-weight-bold sidebar-block" id="{{ article.id }}" onclick="change_article(this)">
+                        <img src="{{ article.img.url }}" class="img-fluid mb-2">
+                        <p>{{ article.title }}</p>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>

@@ -9,6 +9,11 @@ class Article(models.Model):
     pub_date = models.DateField(default=timezone.now)
     img = models.ImageField(upload_to='news', default='default/news-no-img.jpg', null=True)
 
+
+    class Meta:
+        ordering = ['-pub_date']
+
+
     def __str__(self):
         return self.title
     

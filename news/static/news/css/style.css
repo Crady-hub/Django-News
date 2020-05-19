@@ -42,8 +42,15 @@
     position: -webkit-sticky;
     position: sticky;
     top: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .open-article {
+    cursor: pointer;
+}
+
+.sidebar-block {
+    background-color: None;
+    font-size: .7rem;
     cursor: pointer;
 }
