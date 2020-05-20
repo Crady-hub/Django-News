@@ -14,7 +14,7 @@ def main(request):
 
     weather = {
         'city': 'Kiev',
-        'temp': response['main']['temp'],
+        'temp': int(response['main']['temp']),
         'description':response['weather'][0]['description'],
         'icon': response['weather'][0]['icon']
     }
