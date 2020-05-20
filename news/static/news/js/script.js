@@ -30,10 +30,10 @@ function dark_theme() {
         document.querySelector('.navbar-light').className = 'navbar navbar-expand-lg navbar-dark bg-dark'
         document.querySelectorAll('.news').forEach(block => {
             block.style.backgroundColor = `rgba(52, 58, 64, 0.9)`
-            block.style.color = `white`
+            block.style.color = `rgba(245, 245, 245, 1)`
         });
         document.querySelector('.sidebar').style.backgroundColor = 'rgba(52, 58, 64, 0.9)'
-        document.querySelector('.sidebar').style.color = 'white'
+        document.querySelector('.sidebar').style.color = 'rgba(245, 245, 245, 1)'
         document.querySelector('.bg-image').style.backgroundImage = 'url(/static/news/img/night.jpg)'
     }
 }

@@ -1,17 +1,17 @@
 {% extends 'news/index.html' %}
 {% block content %}
-    <div class="col-7 mr-4 ml-4">
+    <div class="col-8 mr-4 ml-4">
     {% for post in articles %}
         <div class="container d-flex justify-content-center flex-column mt-5">
-            <div class="container p-4 news mw-100 mh-100 mb-5 open-article" id="{{ post.id }}" onclick="goto(this)">
+            <div class="container p-4 news mw-100 mh-100 mb-5" id="{{ post.id }}" onclick="goto(this)">
                 <div class="mb-4 ml-3 mr-3 font-weight-bold title text-justify">
-                    <p>{{ post.title }}</p>
+                    <p class="open-article">{{ post.title }}</p>
                 </div>
                 <div class="mr-4 ml-4">
-                    <img src="{{ post.img.url }}" class="img-fluid">
+                    <img src="{{ post.img.url }}" class="img-fluid open-article">
                 </div>
                 <div class="mt-4 ml-3 mr-3 main-text text-justify">
-                    <p>{{ post.text|truncatewords:25 }}</p>
+                    <p>{{ post.text|truncatewords:30 }}</p>
                 </div>
                 <div class="mt-2 ml-3 mr-3 d-flex justify-content-between date-author">
                     <div>{{ post.author }}</div>
@@ -24,9 +24,15 @@
 {% endblock content %}
 {% block sidebar %}
     <div class="col mr-3 ml-3 mt-5">
-        <div class="container d-flex justify-content-center sidebar">
-            <div class="container">
-                Этот блок не доступен в бета-версии 
+        <div class="container d-flex justify-content-around sidebar">
+                <div class="align-self-center">
+                    <img src="https://openweathermap.org/img/w/{{ weather.icon }}.png">
+                </div>
+                <div>
+                    <span class="weather-title">{{ weather.city }}</span></br>
+                    <span class="weather-temp">{{weather.temp}}°C</span></br>
+                    <span class="weather-description">{{ weather.description }}</span>
+                </div>
             </div>
         </div>
     </div>
