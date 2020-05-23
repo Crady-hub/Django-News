@@ -1,8 +1,4 @@
-// function parallax(event) {
-//     selector = this.querySelector('.bg-image')
-//     selector.style.transform = `translate(${event.clientX/50}px, ${event.clientY/50}px) `
-// }
-// document.addEventListener('mousemove', parallax)
+// Тёмная тема при загрузке
 window.onload = check()
 
 function check() {
@@ -14,6 +10,7 @@ function check() {
     }
 }
 
+// Паралакс
 function parallax(event) {
     selector = this.querySelector('.bg-image')
     if (window.pageYOffset / 40 > 196) {
@@ -25,6 +22,7 @@ function parallax(event) {
 
 document.addEventListener('scroll', parallax)
 
+// Тёмная тема
 function dark_theme() {
     if (document.querySelector('.navbar-light')) {
         document.querySelector('.navbar-light').className = 'navbar navbar-expand-lg navbar-dark bg-dark'
@@ -38,6 +36,7 @@ function dark_theme() {
     }
 }
 
+// Светлая тема
 function bright_theme() {
     if (document.querySelector('.navbar-dark')) {
         document.querySelector('.navbar-dark').className = 'navbar navbar-expand-lg navbar-light bg-light'
@@ -51,6 +50,7 @@ function bright_theme() {
     }
 }
 
+// Переходы по ссылкам с тёмной темой
 function goto(element) {
     if (document.querySelector('.navbar-dark')) {
         location.href = `http://127.0.0.1:8000/article/${element.id}?theme=dark`

@@ -7,7 +7,7 @@ from random import randint
 # Create your views here.
 def main(request):
     url = "https://api.openweathermap.org/data/2.5/weather?q=Kiev&units=metric&lang=ru&appid=62eab0657a62438821d5a8ed630678e7"
-
+    # Запрос к апи
     response = requests.get(url).json()
     print(response['main']['temp'])
 
